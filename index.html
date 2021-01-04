@@ -1,32 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Oswald", sans-serif;
-      }
-      .container {
-        height: 100vh;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container mx-auto flex-col justify-center text-center">
-        <div>Team Name</div>
-        <div>1</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Oswald", sans-serif;
+    }
+
+    .container {
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mx-auto text-center  flex justify-center items-center  ">
+    <div style="width:100%;">
+      <div class="header">
+        <h1 class="text-4xl uppercase">Team Name</h1>
+        <div class="text-lg p-2">Description Here</div>
+      </div>
+      <div class="pt-8 text-sm">Please click to view profile</div>
+      <div class="flex justify-evenly mt-5">
+        <div class="person-container">
+          <img src="./boat.jpg">
+          <div class="bg-gray-200 p-3">Prakit Wongnuntananon</div>
+        </div>
+        <div class="person-container">
+          <img src="./boat.jpg">
+          <div class="bg-gray-200 p-3">Pornwut Thammapatee</div>
+        </div>
+        <div class="person-container">
+          <img src="./boat.jpg">
+          <div class="bg-gray-200 p-3">Ruangrit Keawkrom</div>
+        </div>
+      </div>
     </div>
-  </body>
+    
+  </div>
+  <!-- ! personal -->
+  <div class="container mx-auto px-32">
+  <!-- start-->
+  <!-- boat -->
+  <div class="flex justify-start">
+    <img src="test.jpg" alt="test1" style="width: 323px; height: 448px;">
+    <div class="flex flex-col">
+      <div class="flex justify-start ml-12 text-7xl ">Prakit Wongnuntananon</div>
+      <div class="flex justify-start ml-12 mt-5 text-2xl text-left">Lorem ipsum dolor sit amet consectetur adipisicing
+        elit.
+        Eum, asperiores provident. Cum ut, tempore rem a facere quia animi fugiat repellendus
+        consequuntur vero, esse voluptate, non recusandae illum beatae atque?
+      </div>
+      <div class="flex flex-col ml-12">
+        <b class="flex justify-start text-2xl mt-40">Experience</b>
+        <div class="flex justify-start">
+          <div class="mr-12 bg-purple-600 px-10 py-5">react1</div>
+          <div class="mr-12 bg-purple-600 px-10 py-5">react2</div>
+          <div class="mr-12 bg-purple-600 px-10 py-5">react3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- boon -->
+  <div class="flex justify-start mt-20">
+    <img src="test.jpg" alt="test1" style="width: 323px; height: 448px;">
+    <div class="flex flex-col">
+      <div class="flex justify-start ml-12 text-7xl ">Pornwut Thammapatee</div>
+      <div class="flex justify-start ml-12 mt-5 text-2xl text-left">Lorem ipsum dolor sit amet consectetur adipisicing
+        elit.
+        Eum, asperiores provident. Cum ut, tempore rem a facere quia animi fugiat repellendus
+        consequuntur vero, esse voluptate, non recusandae illum beatae atque?
+      </div>
+      <div class="flex flex-col ml-12">
+        <b class="flex justify-start text-2xl mt-40">Experience</b>
+        <div class="flex justify-start">
+          <div class="mr-12 bg-purple-600 px-10 py-5">react1</div>
+          <div class="mr-12 bg-purple-600 px-10 py-5">react2</div>
+          <div class="mr-12 bg-purple-600 px-10 py-5">react3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ruang -->
+  <div class="flex justify-start mt-20">
+    <img src="test.jpg" alt="test1" style="width: 323px; height: 448px;">
+    <div class="flex flex-col">
+      <div class="flex justify-start ml-12 text-7xl ">Ruangrit Keawkrom</div>
+      <div class="flex justify-start ml-12 mt-5 text-2xl text-left">Lorem ipsum dolor sit amet consectetur adipisicing
+        elit.
+        Eum, asperiores provident. Cum ut, tempore rem a facere quia animi fugiat repellendus
+        consequuntur vero, esse voluptate, non recusandae illum beatae atque?
+      </div>
+      <div class="flex flex-col ml-12">
+        <b class="flex justify-start text-2xl mt-40">Experience</b>
+        <div class="flex justify-start">
+          <div class="mr-12 bg-purple-600 px-10 py-5">react1</div>
+          <div class="mr-12 bg-purple-600 px-10 py-5">react2</div>
+          <div class="mr-12 bg-purple-600 px-10 py-5">react3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+  <!-- end -->
+</body>
+
 </html>

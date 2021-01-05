@@ -9,9 +9,14 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
   <style>
     body {
       font-family: "Oswald", sans-serif;
+    }
+    .hidden {
+      display : none;
     }
 
     .container {
@@ -21,35 +26,35 @@
 </head>
 
 <body>
-  <div class="container mx-auto text-center  flex justify-center items-center  ">
+  <div id="mc" class="container mx-auto text-center  flex justify-center items-center  ">
     <div style="width:100%;">
-      <div class="header">
+      <div id="main-header" class="header">
         <h1 class="text-4xl uppercase">Team Name</h1>
         <div class="text-lg p-2">Description Here</div>
       </div>
-      <div class="pt-8 text-sm">Please click to view profile</div>
-      <div class="flex justify-evenly mt-5">
-        <div class="person-container">
+      <div id="view-profile" class="pt-8 text-sm">Please click to view profile</div>
+      <div id="main-cards" class="flex justify-evenly mt-5">
+        <div id="pc-1" class="person-container">
           <img src="./boat.jpg">
           <div class="bg-gray-200 p-3">Prakit Wongnuntananon</div>
         </div>
-        <div class="person-container">
+        <div id="pc-2" class="person-container">
           <img src="./boat.jpg">
           <div class="bg-gray-200 p-3">Pornwut Thammapatee</div>
         </div>
-        <div class="person-container">
+        <div id="pc-3" class="person-container">
           <img src="./boat.jpg">
           <div class="bg-gray-200 p-3">Ruangrit Keawkrom</div>
         </div>
       </div>
     </div>
-    
   </div>
   <!-- ! personal -->
   <div class="container mx-auto px-32">
   <!-- start-->
   <!-- boat -->
-  <div class="flex justify-start">
+  <div id="profile-1" class="flex justify-start hidden">
+    <button class="back" >BACK</button>
     <img src="test.jpg" alt="test1" style="width: 323px; height: 448px;">
     <div class="flex flex-col">
       <div class="flex justify-start ml-12 text-7xl ">Prakit Wongnuntananon</div>
@@ -69,7 +74,8 @@
     </div>
   </div>
   <!-- boon -->
-  <div class="flex justify-start mt-20">
+  <div id="profile-2" class="flex justify-start mt-20 hidden">
+    <button class="back" >BACK</button>
     <img src="test.jpg" alt="test1" style="width: 323px; height: 448px;">
     <div class="flex flex-col">
       <div class="flex justify-start ml-12 text-7xl ">Pornwut Thammapatee</div>
@@ -89,7 +95,8 @@
     </div>
   </div>
   <!-- ruang -->
-  <div class="flex justify-start mt-20">
+  <div id="profile-3" class="flex justify-start mt-20 hidden">
+    <button class="back">BACK</button>
     <img src="test.jpg" alt="test1" style="width: 323px; height: 448px;">
     <div class="flex flex-col">
       <div class="flex justify-start ml-12 text-7xl ">Ruangrit Keawkrom</div>
@@ -114,5 +121,5 @@
 </div>
   <!-- end -->
 </body>
-
+<script src="script.js"></script>
 </html>

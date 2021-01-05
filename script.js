@@ -1,8 +1,8 @@
 
 main = {
-    // header : document.getElementById("main-header"),
-    // card : document.getElementById("main-cards"),
-    // vp : document.getElementById("view-profile"),
+    header : document.getElementById("main-header"),
+    card : document.getElementById("main-cards"),
+    vp : document.getElementById("view-profile"),
     mc : document.getElementById("mc")
 }
 
@@ -19,7 +19,8 @@ profiles = {
     current : 0
 }
 
-const fadeOut = e => {
+const fadeOut = (e,delay) => {
+    e.style.animationDelay = delay
     e.style.animation = "fadeOutUp 1s ease-in-out forwards"
     setTimeout(()=>{e.style.display = "none"},1000)
 }
@@ -59,11 +60,11 @@ const switchToProfile = index => {
 
 const switchToMain = () => {
     const secondContainer = document.getElementsByClassName('container')[1];
-    secondContainer.classList.add('hidden')
     fadeOut(profiles[profiles.current])
     setTimeout(() => {
+        secondContainer.classList.add('hidden')
         fadeInThese(main)
-    }, 550);
+    }, 1000);
     profiles.current = 0
 }
 

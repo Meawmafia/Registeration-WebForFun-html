@@ -50,16 +50,20 @@ const fadeInThese = obj => {
 const switchToProfile = index => {
     fadeOutThese(main)
     setTimeout(() => {
+    const secondContainer = document.getElementsByClassName('container')[1];
+    secondContainer.classList.remove('hidden')
         fadeIn(profiles[index])
     }, 1000);
     profiles.current = index
 }
 
 const switchToMain = () => {
+    const secondContainer = document.getElementsByClassName('container')[1];
+    secondContainer.classList.add('hidden')
     fadeOut(profiles[profiles.current])
     setTimeout(() => {
         fadeInThese(main)
-    }, 1000);
+    }, 550);
     profiles.current = 0
 }
 
@@ -68,7 +72,5 @@ cards.pc1.addEventListener("click",()=>{switchToProfile(1)})
 cards.pc2.addEventListener("click",()=>{switchToProfile(2)})
 cards.pc3.addEventListener("click",()=>{switchToProfile(3)})
 
-backButtons = document.getElementsByClassName("back")
-backButtons[0].addEventListener("click",switchToMain)
-backButtons[1].addEventListener("click",switchToMain)
-backButtons[2].addEventListener("click",switchToMain)
+backButtons = Array.from(document.getElementsByClassName("back"));
+backButtons.map(element => element.addEventListener("click",switchToMain))

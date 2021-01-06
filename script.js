@@ -25,9 +25,10 @@ const fadeOut = (e,delay) => {
     setTimeout(()=>{e.style.display = "none"},1000)
 }
 
-const fadeIn = e => {
-    e.style.display = "flex"
-    e.style.animation = "fadeInUp 1s ease-in-out forwards"
+const fadeIn = (e,isBlock) => {
+    if(isBlock) e.style.display = "block";
+    else e.style.display = "flex"; 
+    e.style.animation = "fadeInUp 1s ease-in-out forwards";
 }
 
 const fadeOutThese = obj => {
@@ -43,7 +44,9 @@ const fadeInThese = obj => {
     for (const key in obj) {
         if (Object.hasOwnProperty.call(obj, key)) {
             const element = obj[key];
-            fadeIn(element)
+            let isBlock = false;
+            if(key === "header" || key === "vp") isBlock = true;
+            fadeIn(element,isBlock)
         }
     }
 }
@@ -69,9 +72,7 @@ const switchToMain = () => {
 }
 
 
-cards.pc1.addEventListener("click",()=>{switchToProfile(1)})
-cards.pc2.addEventListener("click",()=>{switchToProfile(2)})
-cards.pc3.addEventListener("click",()=>{switchToProfile(3)})
+Object.values(cards).forEach((element,index) => element.addEventListener("click",()=>{switchToProfile(index + 1)}));
 
 backButtons = Array.from(document.getElementsByClassName("back"));
 backButtons.map(element => element.addEventListener("click",switchToMain))
